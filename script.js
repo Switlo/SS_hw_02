@@ -16,14 +16,14 @@ const sideLength = prompt(`Введіть, будь ласка, довжину �
 alert(`Периметр вашого квадрата — ${sideLength * 4} см.`);
 
 // 4
-const distance = prompt(`Введіть, будь ласка, відстань у км між пунктами вашого призначення`);
-const time = prompt(`За скільки часу вам потрібно подолати цю відстань у годинах?`);
+const distance = prompt(`Введіть, будь ласка, відстань у км, яку потрібно подолати`);
+const time = prompt(`За скільки годин вам потрібно подолати цю відстань?`);
 alert(`Щоб досягти мети, вам слід рухатись зі швидкістю ${Math.round(distance / time)} км/год`);
 
 // HARD
 // 1
 const userNumber = prompt(`Введіть тризначне число`);
-alert(`Отримайте його "перевертень" — ${userNumber.split("").reverse().join("")}`);
+alert(`Отримайте його "перевертень" — ${userNumber.split("").reverse().join("")}.`);
 
 // split - розбиває рядок на символи;
 // reverse - перевертає массив;
@@ -32,7 +32,7 @@ alert(`Отримайте його "перевертень" — ${userNumber.spl
 
 // 2
 const celsiusTemperature = prompt(`Cavin, type please a temperature in Celsius`);
-alert(`The temperature in Fahrenheit is ${Math.round((celsiusTemperature * 9) / 5 + 32)}`);
+alert(`The temperature in Fahrenheit is ${Math.round((celsiusTemperature * 9) / 5 + 32)}.`);
 
 // 3
 
@@ -40,9 +40,11 @@ const redHex = prompt(`Введіть насиченість червоного 
 const greenHex = prompt(`Введіть насиченість зеленого кольору у Hex форматі`);
 const blueHex = prompt(`Введіть насиченість синього кольору у Hex форматі`);
 
-// const redRgb = "0x" + redHex[1] + redHex[2];
-// const greenRgb = "0x" + greenHex[1] + greenHex[2];
-// const bluRgb = "0x" + blueHex[1] + blueHex[2];
+const redRgb = parseInt(redHex, 16);
+const greenRgb = parseInt(greenHex, 16);
+const bluRgb = parseInt(blueHex, 16);
 
-// alert(`Ваш колір у форматі RGB = ${+redRgb}, ${+greenRgb}, ${+bluRgb}.`);  
+alert(`Ваш колір у форматі RGB = ${redRgb}, ${greenRgb}, ${bluRgb}.`); 
+
+document.body.style.backgroundColor = `#${redRgb}${greenRgb}${bluRgb}`; 
   
